@@ -1,0 +1,43 @@
+* {
+  li:hover {
+    cursor: pointer;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.17);
+  }
+
+  .Individual-heading {
+    display: flex;
+    align-content: center;
+    margin-left: 2rem;
+    padding: 0.8rem;
+  }
+
+  #Initials {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 100%; 
+    letter-spacing: 0.482px;
+  }
+
+  #HeadingText {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    display: flex;
+    align-self: center;
+    margin-left: 1.7rem;
+  }
+}
