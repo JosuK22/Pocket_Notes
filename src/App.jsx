@@ -4,7 +4,7 @@ import GroupList from "./Components/GroupList";
 import NoteList from "./Components/NoteList";
 import ColorChoice from "./Components/ColorChoice";
 import moment from "moment";
-import { getInitials } from "./Components/utils";
+import { getInitials } from "./Components/script";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
