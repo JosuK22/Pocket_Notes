@@ -24,6 +24,11 @@ function App() {
   }, [headingList]);
 
   const handleCreate = () => {
+
+    if (groupName.trim() === "") {
+      return;
+    }
+    
     setHeadingList((prevList) => [
       ...prevList,
       { name: groupName, color: groupColor, initials: "", notes: [] },

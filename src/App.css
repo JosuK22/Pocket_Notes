@@ -271,7 +271,7 @@
     
   }
 
-  @media (max-width : 900px){
+  @media (max-width : 1000px){
     .Pocket-Notes{
 
       .Heading{
@@ -287,7 +287,9 @@
     .Notes .Blank-Display #text2,.Notes .Blank-Display #text3 , .Notes .Blank-Display #text4 {
       font-size: 18px; 
     }
-    
+    .Notes .Blank-Display .Initial-Image{
+      background-size: 50%;
+    }
     
   }
   @media (max-width: 768px) {
