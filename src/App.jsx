@@ -10,6 +10,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [groupName, setGroupName] = useState("");
   const [groupColor, setGroupColor] = useState("#B38BFA");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [headingList, setHeadingList] = useState(() => {
     const storedHeadings = localStorage.getItem("headings");
     return storedHeadings ? JSON.parse(storedHeadings) : [];
@@ -28,7 +29,7 @@ function App() {
     if (groupName.trim() === "") {
       return;
     }
-    
+
     setHeadingList((prevList) => [
       ...prevList,
       { name: groupName, color: groupColor, initials: "", notes: [] },
@@ -42,6 +43,14 @@ function App() {
     setSelectedHeading(heading);
   };
 
+  const updateScreenSize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+  
+  useEffect(() => {
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
   
   const handleSubmit = () => {
     const newNote = textareaValue.trim();
@@ -84,6 +93,7 @@ function App() {
           <p className="sign">+</p>
         </button>
       </div>
+      
       
       <div className="Notes">
         {selectedHeading ? (
