@@ -41,3 +41,26 @@
     margin-left: 1.7rem;
   }
 }
+
+@media (max-width : 900px){
+  #Initials{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+
+  }
+  #HeadingText{
+    font-size: 15px;
+  }  
+}
+
+@media (max-width : 768px){
+  #Initials{
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+  } 
+  #HeadingText{
+    font-size: 25px;
+  }  
+}
