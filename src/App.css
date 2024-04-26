@@ -9,6 +9,7 @@
   display: flex;
   height: 100vh;
 
+  
   .Pocket-Notes {
     height: 100vh;
     flex: 0.25;
@@ -92,6 +93,10 @@
         font-weight: 500;
         line-height: 32px; 
         letter-spacing: 0.44px;
+      }
+
+      #text2{
+        margin-top: 15px;
       }
 
       #text4 {
@@ -234,6 +239,7 @@
           font-size: 23px;
         }
       }
+      
     }
 
     .HeadingColor {
@@ -247,7 +253,8 @@
       height: 2.5rem;
       align-self: flex-end;
       margin: .5rem;
-      margin-top: 1rem;
+      margin-top: .7rem;
+      /* margin-bottom: var(); */
       border-radius: 11px;
       background: #001f8b;
       color: #fff;
@@ -259,6 +266,27 @@
       letter-spacing: 0.7px;
     }
 
+    
+  }
+  @media (max-width: 768px) {
+    
+    .ModalContent {
+      width: 30rem;
+      font-size: 20px;
+
+      .HeadingName{
+        input{
+          font-size: 15px;
+          width: 15rem;
+          height: 3rem;
+        }
+      }
+
+      button{
+        margin-top: 2rem;
+        width: 7rem;
+      }
+    }
     
   }
 }

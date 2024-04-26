@@ -37,23 +37,7 @@ function App() {
     setSelectedHeading(heading);
   };
 
-  const resetHandler = () => {
-    setHeadingList([]);
-    localStorage.removeItem("headings");
-    window.location.reload;
-  };
-
-  const deleteAllNotesForHeading = () => {
-    setHeadingList((prevList) =>
-      prevList.map(
-        (heading) =>
-          heading.name === selectedHeading.name
-            ? { ...heading, notes: [] } 
-            : heading 
-      )
-    );
-  };
-
+  
   const handleSubmit = () => {
     const newNote = textareaValue.trim();
     const date = moment(new Date());
@@ -84,6 +68,7 @@ function App() {
 
   return (
     <div className="main">
+      
       <div className="Pocket-Notes">
         <div className="Heading">Pocket Notes</div>
         <GroupList
@@ -94,7 +79,7 @@ function App() {
           <p className="sign">+</p>
         </button>
       </div>
-
+      
       <div className="Notes">
         {selectedHeading ? (
           <>
@@ -171,6 +156,7 @@ function App() {
           </div>
         )}
       </div>
+      
       {modalOpen && (
         <div className="NewHeadingModal" onClick={(e) => setModalOpen(false)}>
           <div className="ModalContent" onClick={(e) => e.stopPropagation()}>
@@ -210,16 +196,6 @@ function App() {
             </div>
             <button type="button" onClick={handleCreate}>
               create
-            </button>
-            <button type="button" id="godMode" onClick={resetHandler}>
-              DEV RESET
-            </button>
-            <button
-              type="button"
-              id="deleteNotes"
-              onClick={deleteAllNotesForHeading}
-            >
-              Delete Notes of Selected Heading
             </button>
           </div>
         </div>

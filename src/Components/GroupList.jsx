@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import "./css/GroupList.scss";
 import Groups from "./Groups";
 import { getInitials } from "./script";
